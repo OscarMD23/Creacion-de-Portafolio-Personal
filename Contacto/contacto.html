@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="contacto.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header text-center">
+      <h1 id="title">Formulario de Contacto</h1>
+      <p id="description" class="description">Por favor rellena este formulario con la información requerida</p>
+    </header>
+
+    <form id="survey-form">
+      <div class="form-group">
+        <label for="name" id="name-label">Nombre completo:</label>
+        <input id="name" name="name" type="text" class="form-control" placeholder="Juan García Pérez" required />
+      </div>
+
+      <div class="form-group">
+        <legend>Género</legend>
+        <label><input type="radio" name="genero" value="Masculino" class="input-radio" checked /> Masculino</label>
+        <label><input type="radio" name="genero" value="Femenino" class="input-radio" /> Femenino</label>
+        <label><input type="radio" name="genero" value="Otro" class="input-radio" /> Otro</label>
+      </div>
+
+      <div class="form-group">
+        <label for="email" id="email-label">Correo electrónico:</label>
+        <input id="email" name="email" type="email" class="form-control" placeholder="juan@example.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="number" id="number-label">Edad:</label>
+        <input id="number" name="number" type="number" class="form-control" min="18" max="59" placeholder="21" required />
+      </div>
+
+      <div class="form-group">
+        <label for="dropdown">¿En qué ciudad vives?</label>
+        <select id="dropdown" name="dropdown" class="form-control">
+          <option value="">(Selecciona una)</option>
+          <option value="1">Barranquilla</option>
+          <option value="2">Bogotá</option>
+          <option value="3">Cali</option>
+          <option value="4">Medellín</option>
+          <option value="5">Otra</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>¿Qué habilidades manejas mejor?</p>
+        <label><input type="checkbox" name="prefer" value="front-end-projects" class="input-checkbox" /> Front-end Projects</label>
+        <label><input type="checkbox" name="prefer" value="back-end-projects" class="input-checkbox" /> Back-end Projects</label>
+        <label><input type="checkbox" name="prefer" value="data-visualization" class="input-checkbox" /> Data Visualization</label>
+        <label><input type="checkbox" name="prefer" value="challenges" class="input-checkbox" /> Challenges</label>
+        <label><input type="checkbox" name="prefer" value="open-source-community" class="input-checkbox" /> Open Source Community</label>
+      </div>
+
+      <div class="form-group">
+        <label for="review">Observaciones:</label>
+        <textarea id="review" name="review" class="input-textarea" rows="3" placeholder="Escribe aquí..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Enviar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
